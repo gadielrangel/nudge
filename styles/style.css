@@ -1,14 +1,4 @@
-@font-face {
-    font-family: "Inter";
-    src: url("../assets/fonts/inter_variable.woff2") format("woff2");
-    font-display: swap; /* Shows fallback immediately */
-}
 
-@font-face {
-    font-family: "Super Morning";
-    src: url("../assets/fonts/super_morning.woff2") format("woff2");
-    font-display: swap; /* Shows fallback immediately */
-}
 
 /* 1. Use a more-intuitive box-sizing model */
 *,

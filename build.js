@@ -54,8 +54,8 @@ async function buildHtml() {
     const finalCssPath = buildFinalPath(CSS_OUTPUT_FILENAME);
 
     // Optionally save to a file
-    await createFileWithFolder(finalHtmlPath, minifiedHtml);
     await createFileWithFolder(finalCssPath, css);
+    await createFileWithFolder(finalHtmlPath, minifiedHtml);
 
     console.log(`\nMinified HTML saved to ${finalHtmlPath}`);
     console.log(`Minified CSS saved to ${finalCssPath}`);

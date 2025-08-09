@@ -1,0 +1,188 @@
+@font-face {
+    font-family: "Inter";
+    src: url("../assets/fonts/inter_variable.woff2") format("woff2");
+    font-display: swap; /* Shows fallback immediately */
+}
+
+@font-face {
+    font-family: "Super Morning";
+    src: url("../assets/fonts/super_morning.woff2") format("woff2");
+    font-display: swap; /* Shows fallback immediately */
+}
+
+/* 1. Use a more-intuitive box-sizing model */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* 2. Remove default margin */
+* {
+    margin: 0;
+}
+
+/* 3. Enable keyword animations */
+@media (prefers-reduced-motion: no-preference) {
+    html {
+        interpolate-size: allow-keywords;
+    }
+}
+
+/* 6. Improve media defaults */
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+}
+
+/* 7. Inherit fonts for form controls */
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+/* 8. Avoid text overflows */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    overflow-wrap: break-word;
+}
+
+/* 9. Improve line wrapping */
+p {
+    text-wrap: pretty;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    text-wrap: balance;
+}
+
+/*
+  10. Create a root stacking context
+*/
+#root,
+#__next {
+    isolation: isolate;
+}
+
+#root {
+    text-rendering: optimizeLegibility; /* Better quality for headings */
+    /* Font smoothing for webkit browsers */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    /* Ensure consistent font weight rendering */
+    font-synthesis: none;
+
+    /* Better kerning and ligatures */
+    font-feature-settings:
+        "kern" 1,
+        "liga" 1;
+
+    /* Consistent line height and spacing */
+    line-height: 1.5;
+    letter-spacing: -0.01em;
+
+    font-family:
+        "Inter",
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+}
+
+/* For headings and larger text */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    text-rendering: geometricPrecision;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+}
+
+/* Ensure crisp rendering for specific elements */
+button,
+input,
+select,
+textarea {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    body {
+        -webkit-font-smoothing: subpixel-antialiased;
+    }
+}
+
+.btn {
+    display: inline-block;
+    padding: 8px 10px;
+
+    font-size: 14px;
+    font-weight: 500;
+    text-decoration: none;
+    color: #fff;
+    background: #000;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    gap: 4px;
+}
+
+.btn:hover {
+    background: #333;
+}
+
+.btn:active {
+    background: #555;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    width: 100vw;
+    height: 100vh;
+    gap: 40px;
+}
+
+.main-text {
+    color: white;
+    font-size: 28px;
+    font-weight: 600;
+
+    width: 700px;
+}
+
+.unstyled-list > li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.unstyled-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
